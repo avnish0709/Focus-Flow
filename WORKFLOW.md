@@ -30,5 +30,57 @@ Review effort & time comparison
 AI mistake caught
 - The AI in round‑1 used `alert()` and saved raw values to `localStorage` without validation; I corrected this in round‑2 and added tests to catch regressions.
 
+# Focus Flow
+
+Focus Flow is a lightweight Next.js productivity app for managing focused study sessions, simple task lists, and user-configurable settings.
+
+Built with TypeScript and modern React patterns, Focus Flow combines a study timer, ambient experience, and task manager into a compact web app that helps users stay on track without unnecessary complexity.
+
+## Features
+
+- **Study Timer**: start, pause, and reset focused work sessions.
+- **Task Manager**: add, complete, and filter tasks with quick persistence.
+- **Ambient Experience**: nature background and optional music help maintain concentration.
+- **Settings**: configurable preferences with validated forms using `react-hook-form` and `zod`.
+- **Accessibility**: inline error messages, semantic labels, and explicit ARIA feedback.
+- **Tested UI**: core form behavior is covered by Vitest and Testing Library.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- `react-hook-form` + `zod`
+- Vitest
+- pnpm
+
+## Quick Start
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Then open `http://localhost:3000`.
+
+## Testing
+
+```bash
+pnpm test
+```
+
+## Project Structure
+
+- `app/` — Next.js routes and global styles
+- `components/` — UI components and feature forms
+- `hooks/` — custom hooks
+- `lib/` — shared types and utilities
+- `__tests__/` — test coverage for feature behavior
+
 Conclusion
 - Use Round‑1 for rapid prototyping, but always follow with a precise, test-first round when correctness, accessibility, and maintainability matter. The two‑round drill demonstrates how a concise spec and test requirements significantly reduce review overhead.
+
+## Notes
+
+This repo includes a two-round feature workflow for settings form development: a rapid first pass and a validated second pass with explicit tests and accessibility improvements.
+
